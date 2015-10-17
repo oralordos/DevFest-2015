@@ -1,0 +1,29 @@
+{{define "index"}}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+</head>
+<body>
+  {{if .Login}}
+  <a href="/profile">Profile</a>
+  <a href="{{.LogoutURL}}">Logout</a>
+  {{else}}
+  <a href="{{.LoginURL}}">Login</a>
+  {{end}}
+</body>
+</html>
+{{end}}
+
+
+{{define "profile"}}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+</head>
+<body>
+  <p>Welcome, {{.}}</p>
+</body>
+</html>
+{{end}}

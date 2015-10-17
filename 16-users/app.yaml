@@ -1,0 +1,11 @@
+application: devfestexample
+version: example
+runtime: go
+api_version: go1
+
+handlers:
+- url: /profile
+  login: required
+  script: _go_app
+- url: /.*
+  script: _go_app
