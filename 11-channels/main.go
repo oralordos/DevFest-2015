@@ -25,6 +25,5 @@ func main() {
 	// I can do something else while the goroutine runs.
 	fmt.Println(fib(30))
 	// The <- before a channel returns the data in the channel, waiting if there is no data.
-	x := <-c
-	fmt.Println(x)
+	fmt.Println(<-c)
 }
