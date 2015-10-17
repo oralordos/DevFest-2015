@@ -1,0 +1,19 @@
+{{define "index"}}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+  <form method="post">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="message" placeholder="Message">
+    <input type="submit">
+  </form>
+  {{range .}}
+  <p>{{.Message}} <span class="name">{{.Name}}</span></p>
+  {{end}}
+</body>
+</html>
+{{end}}
