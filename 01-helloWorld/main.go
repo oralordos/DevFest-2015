@@ -1,11 +1,22 @@
+// First line must be a package statement.
 package main
 
+// Import statements work in a similar way to python's imports.
 import "fmt"
 
 func main() {
+	// The Println function is from the fmt package, it is the normal way to output text in go.
 	fmt.Println("Hello World!")
-	fmt.Println("What is your name?")
+	// The Print function does the same thing as Println, but without the newline at the end.
+	fmt.Print("What is your name? ")
+	// This is how you define an empty variable, var <name> <type>
 	var myName string
-	fmt.Scanln(&myName)
-	fmt.Println("It is nice to meet you,", myName)
+	// This is how you get input, Scan will read in a line typed at the console, and will
+	// separate the values based on whitespace and put it in the memory addresses of the arguments.
+	// The & symbol gets the memory address of a variable, same as C.
+	fmt.Scan(&myName)
+	// The Printf function is similar to the C function of the same name, it is useful if
+	// you have data that you want to put in your printed text. Make sure you end with a
+	// newline if you need one.
+	fmt.Printf("It is nice to meet you, %s.\n", myName)
 }
