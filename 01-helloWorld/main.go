@@ -1,9 +1,11 @@
 // First line must be a package statement.
+// package will be main for an executable, something else if it is meant to be imported.
 package main
 
 // Import statements work in a similar way to python's imports.
 import "fmt"
 
+// package main function main is the entry point into the program.
 func main() {
 	// The Println function is from the fmt package, it is the normal way to output text in Go.
 	fmt.Println("Hello World!")
