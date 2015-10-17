@@ -5,7 +5,7 @@ package main
 import "fmt"
 
 func main() {
-	// The Println function is from the fmt package, it is the normal way to output text in go.
+	// The Println function is from the fmt package, it is the normal way to output text in Go.
 	fmt.Println("Hello World!")
 	// The Print function does the same thing as Println, but without the newline at the end.
 	fmt.Print("What is your name? ")
