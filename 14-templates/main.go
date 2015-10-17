@@ -19,6 +19,7 @@ func init() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/foo", foo)
 	http.HandleFunc("/bar", bar)
+	http.HandleFunc("/extra", extra)
 }
 
 func index(res http.ResponseWriter, req *http.Request) {
@@ -45,4 +46,10 @@ func bar(res http.ResponseWriter, req *http.Request) {
 	// Here we pass the struct to the template.
 	// Note that sending a pointer in more efficient than the value for structs.
 	tpl.ExecuteTemplate(res, "bar", &model)
+}
+
+func extra(res http.ResponseWriter, req *http.Request) {
+	// Lists of things can be sent as well.
+	data := []int{4, 6, 1, 2}
+	tpl.ExecuteTemplate(res, "extra", data)
 }

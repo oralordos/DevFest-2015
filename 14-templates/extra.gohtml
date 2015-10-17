@@ -1,13 +1,15 @@
-{{define "index"}}<!DOCTYPE html>
+{{define "extra"}}<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Example</title>
 </head>
 <body>
-  <a href="/foo">Foo</a>
-  <a href="/bar">Bar</a>
-  <a href="/extra">Extra</a>
+  <ul>
+    {{range .}}
+    <li>{{.}}</li>
+    {{end}}
+  </ul>
 </body>
 </html>
 {{end}}
