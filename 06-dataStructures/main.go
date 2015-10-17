@@ -1,5 +1,6 @@
 package main
 
+// Multiple imports can be grouped like this.
 import (
 	"fmt"
 	"math/rand"
@@ -28,6 +29,9 @@ func main() {
 	fmt.Println(favorites["Foo"])
 	fmt.Println(data[0])
 
+	// You can make a slice through taking parts of arrays or other slices as well.
+	// Before the : is the index the new slice will start at, it defaults to the beginning.
+	// After the : is the index the new slice will end right before, it defaults to the end.
 	x := numbers[1:]
 	fmt.Println(x)
 }
